@@ -29,7 +29,6 @@ module.exports = {
             "error",
             "single"
         ],
-        "semi": [
-        ]
+        "semi": 0
     }
 };

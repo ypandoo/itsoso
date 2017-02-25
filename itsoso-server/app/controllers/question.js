@@ -12,7 +12,7 @@ exports.add = function *(next){
     var content = body.content;
     var tags = body.tags;
 
-    //循环存储tag, whether we need record tag name rather than only save id ?
+    //循环存储tag, 存储tagname，硬盘比cpu便宜 
     var tagsArray = [];
     for(var index in tags){
       var _findOrSave = yield DBHelper.findOrSave(Tag, {name:tags[index]});
