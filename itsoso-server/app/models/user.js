@@ -9,7 +9,7 @@ var UserSchema = new mongoose.Schema({
     },
     areaCode: String,
     verifyCode: String,
-    verify:{
+    verify: {
         type: Boolean,
         default: false
     },
@@ -19,7 +19,7 @@ var UserSchema = new mongoose.Schema({
     breed: String,
     age: String,
     avatar: String,
-    meta:{
+    meta: {
         createAt: {
             type: Date,
             default: Date.now()
@@ -31,8 +31,8 @@ var UserSchema = new mongoose.Schema({
     }
 });
 
-UserSchema.pre('save', function(next){
-    if(!this.isNew){
+UserSchema.pre('save', function(next) {
+    if (!this.isNew) {
         this.meta.updateAt = Date.now();
     }
 
@@ -40,6 +40,4 @@ UserSchema.pre('save', function(next){
 });
 
 
-var findOrCreate = require('mongoose-findorcreate')
-UserSchema.plugin(findOrCreate);
 mongoose.model('User', UserSchema);

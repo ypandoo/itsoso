@@ -37,3 +37,20 @@ hello(__dirname+'/app.js').then(log).then(function(){
 }).catch(function(err) {
   console.log(err)
 })
+
+// a.get('/', function(err, req, res){
+//   if(!err)
+//   {
+
+//   }
+//   if(req)
+//   {
+//     b.readfile('j.json', function(){
+//       c.readfile
+//     })
+//   }
+// })
+
+// yield a
+// yield b
+// yield c
