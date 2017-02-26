@@ -12,7 +12,8 @@ class TagEditor extends Component {
   componentDidMount(){
     $('#'+this.state.tagId).tagEditor({
         delimiter: ', ', /* space and comma */
-        placeholder: '请输入标签'
+        placeholder: '请输入标签',
+        removeDuplicates: false
     });
   }
 
