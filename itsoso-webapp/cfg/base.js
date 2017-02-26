@@ -39,5 +39,10 @@ module.exports = {
       'react/lib/ReactMount': 'react-dom/lib/ReactMount'
     }
   },
+
+  externals: {
+    jquery: 'window.$'
+  },
+
   module: {}
 };
